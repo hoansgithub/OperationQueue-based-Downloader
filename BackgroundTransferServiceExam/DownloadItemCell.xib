@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DownloadItemCell" rowHeight="80" id="KGk-i7-Jjw" customClass="DownloadItemCell" customModule="BackgroundTransferServiceExam" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="uUq-hF-4he">
+                        <rect key="frame" x="8" y="69.5" width="304" height="2"/>
+                    </progressView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QEK-8k-UTk">
+                        <rect key="frame" x="282" y="22" width="30" height="36"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                        <state key="normal" title="C"/>
+                        <connections>
+                            <action selector="didTapBtnCancel:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="uET-3P-dMN"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sEG-3T-8s4">
+                        <rect key="frame" x="232" y="21" width="30" height="38"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                        <state key="normal" title="S"/>
+                        <connections>
+                            <action selector="didTapBtnStartPause:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="NRk-9A-MsI"/>
+                        </connections>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vfa-BC-gk3">
+                        <rect key="frame" x="8" y="26.5" width="54" height="26.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="sEG-3T-8s4" firstAttribute="centerY" secondItem="QEK-8k-UTk" secondAttribute="centerY" id="Is4-Zb-aTU"/>
+                    <constraint firstAttribute="bottom" secondItem="uUq-hF-4he" secondAttribute="bottom" constant="8" id="U1a-Uy-dFD"/>
+                    <constraint firstItem="QEK-8k-UTk" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="UeL-ra-gck"/>
+                    <constraint firstItem="vfa-BC-gk3" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="VHV-hf-trz"/>
+                    <constraint firstItem="vfa-BC-gk3" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="dMM-QK-tyQ"/>
+                    <constraint firstItem="uUq-hF-4he" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="nM3-Ti-QPY"/>
+                    <constraint firstItem="QEK-8k-UTk" firstAttribute="leading" secondItem="sEG-3T-8s4" secondAttribute="trailing" constant="20" id="uCu-TS-GAZ"/>
+                    <constraint firstAttribute="trailing" secondItem="uUq-hF-4he" secondAttribute="trailing" constant="8" id="v6Z-Tc-caK"/>
+                    <constraint firstAttribute="trailing" secondItem="QEK-8k-UTk" secondAttribute="trailing" constant="8" id="wZb-s8-A9q"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="btnCancel" destination="QEK-8k-UTk" id="QG4-EW-Kb5"/>
+                <outlet property="btnStartPause" destination="sEG-3T-8s4" id="dap-KB-1s9"/>
+                <outlet property="lblTitle" destination="vfa-BC-gk3" id="gKW-ss-fT5"/>
+                <outlet property="progressView" destination="uUq-hF-4he" id="GNk-xX-Nda"/>
+            </connections>
+            <point key="canvasLocation" x="97" y="77"/>
+        </tableViewCell>
+    </objects>
+</document>
